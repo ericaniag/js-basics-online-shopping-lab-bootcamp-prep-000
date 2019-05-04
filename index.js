@@ -66,7 +66,7 @@ function placeOrder(cardNumber) {
     }
     return sum
   }
-  if (cardNumber.length === 0) {
+  if (cardNumber === []) {
     return "Sorry, we don't have a credit card on file for you."
   } else {
     var total = total()
