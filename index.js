@@ -44,7 +44,16 @@ function removeFromCart(item) {
   var check = 0
   for (var i = 0; i < cart.length; i++) {
     if (cart[i].itemName === item) {
-      
+      check = 1 
+    }
+  }
+  if (check === 0) {
+    return "That item is not in your cart."
+  } else {
+    for (var j = 0; j < cart.length; j++) {
+      if (cart[j].itemName === item) {
+        cart.splice(j,1)
+      }
     }
   }
 }
